@@ -46,10 +46,11 @@ public class Ej5 {
                         System.out.println("Has seleccionado la opción JUEGO DE DADOS");
                         break;
                     case 3:
+                        System.out.println("¿Desea salir?. Para salir escriba SI\n");
                         do {
                             // sc.nextInt(); 
                             //bug. se repite la siguiente linea pero no se como es,
-                            System.out.println("¿Desea salir?. Para salir escriba SI\n");
+                            //System.out.println("¿Desea salir?. Para salir escriba SI\n");
 
                             opt = sc.nextLine();
                             if (opt.equalsIgnoreCase("si")) {

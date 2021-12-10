@@ -9,7 +9,6 @@ package ejercicios;
  *
  * @author Victoria
  */
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -53,18 +52,19 @@ public class Ej3 {
                 } else if (a == 0 && b != 0) {
                     x = -c / b;
                     JOptionPane.showMessageDialog(null, "La solución es: " + x);
-                } else  {
-                    double solve1 = (-b + (Math.sqrt((Math.pow(b, 2) - 4 * a * c))) / (2 * a));
-                    System.out.println("Solución 1= " + solve1);
-
-                    double solve2 = (-b - (Math.sqrt((Math.pow(b, 2) - 4 * a * c))) / (2 * a));
-                    System.out.println("Solución 2= " + solve2);
-                    JOptionPane.showMessageDialog(null, "Solución 1:  " + solve1 + "\nSolución2:  " + solve2);
-                    //si es menor que 1
+                } else {
                     if ((Math.pow(b, 2) - (4 * a * c)) < 0) {
                         JOptionPane.showMessageDialog(null, "Los valores suministrador no permiten calcular la solución.");
-                        seguir= true;
-                      //OJO CREO QUE AQUÍ HAY UN FALLO PORQUE NO SE SALE DEL BUCLE  
+                        seguir = true;
+                        //OJO CREO QUE AQUÍ HAY UN FALLO PORQUE NO SE SALE DEL BUCLE  
+                    } else {
+                        double solve1 = (-b + (Math.sqrt((Math.pow(b, 2) - 4 * a * c))) / (2 * a));
+                        System.out.println("Solución 1= " + solve1);
+
+                        double solve2 = (-b - (Math.sqrt((Math.pow(b, 2) - 4 * a * c))) / (2 * a));
+                        System.out.println("Solución 2= " + solve2);
+                        JOptionPane.showMessageDialog(null, "Solución 1:  " + solve1 + "\nSolución2:  " + solve2);
+                        //si es menor que 1
                     }
                 }
 
@@ -73,11 +73,9 @@ public class Ej3 {
                 //sc.nextLine();
 
             }
-            
 
         } while (seguir);
 
     }
-    
-    
+
 }
